@@ -1,0 +1,22 @@
+{
+  "name": "lloyd3126-skills",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Reusable personal agent skills",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lloyd3126/skills"
+  },
+  "license": "MIT",
+  "scripts": {
+    "changeset": "changeset",
+    "version": "changeset version && node scripts/sync-plugin-version.mjs",
+    "check-plugin-version": "node scripts/sync-plugin-version.mjs --check",
+    "check": "npm run check-plugin-version && bash -n scripts/list-skills.sh && bash -n scripts/link-skills.sh"
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "^0.7.0",
+    "@changesets/cli": "^2.30.0"
+  },
+  "packageManager": "npm@10.9.4"
+}

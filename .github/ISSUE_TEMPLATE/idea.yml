@@ -1,0 +1,15 @@
+name: Idea
+description: 提出可重用的工作流程
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: 實際需求
+      description: 何時使用、需要哪些輸入、希望得到什麼結果？
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 現有做法與改善依據
+      description: 提供真實案例或已觀察到的重複工作。

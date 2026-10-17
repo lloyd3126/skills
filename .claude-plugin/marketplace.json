@@ -1,0 +1,13 @@
+{
+  "name": "lloyd3126",
+  "owner": {
+    "name": "lloyd3126"
+  },
+  "plugins": [
+    {
+      "name": "lloyd3126-skills",
+      "source": "./",
+      "description": "Reusable personal agent skills"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+name: Bug
+description: 回報 skill 在實際任務中的錯誤
+body:
+  - type: input
+    id: skill
+    attributes:
+      label: Skill 名稱
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Agent、模型與版本
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 重現步驟、實際結果與預期結果
+      description: 提供已去除憑證及私密資訊的最小案例。
+    validations:
+      required: true

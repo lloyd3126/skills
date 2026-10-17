@@ -1,0 +1,11 @@
+{
+  "name": "lloyd3126-skills",
+  "version": "0.0.0",
+  "description": "Reusable personal agent skills",
+  "author": {
+    "name": "lloyd3126"
+  },
+  "repository": "https://github.com/lloyd3126/skills",
+  "license": "MIT",
+  "skills": []
+}
