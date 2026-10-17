@@ -1,6 +1,6 @@
 # 本機試用與安裝
 
-目前的實驗項目見 [in-progress 分類目錄](../skills/in-progress/README.md)，本機連結工具不處理此分類。新增並驗證正式 skills 後：
+正式 skills 見 [productivity 分類目錄](../skills/productivity/README.md)。維護者可以在 repo 根目錄使用以下工具：
 
 ```sh
 bash scripts/link-skills.sh
@@ -11,4 +11,6 @@ bash scripts/link-skills.sh --apply
 
 每個連結直接指向此 repo，後續修改會立即影響本機使用的內容。`--apply` 是明確的本機安裝操作，不屬於一般編輯與檢查。
 
-Plugin 設定已預留，待有正式 skill 並在目標 agent 驗證後，再補上實測的安裝命令。
+專案級安裝 `plan-sdgs-exhibition` 的提示見[使用說明](../docs/productivity/plan-sdgs-exhibition.md)。這與上方的個人目錄連結工具是不同的安裝範圍。
+
+Plugin 清單包含正式 skills；plugin 安裝尚未在目標 agent 驗證，驗證後再補上實測命令。

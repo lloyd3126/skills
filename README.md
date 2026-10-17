@@ -2,7 +2,7 @@
 
 將實際使用的工作流程整理成小而可組合、可版本控制的 agent skills。
 
-目前有[實驗中的 skills](skills/in-progress/README.md)。尚無正式 skills，也尚未發佈或驗證 plugin 安裝。
+正式 skills 收錄於下方目錄。可從 GitHub 指定 skill 目錄安裝；plugin 安裝尚未驗證。
 
 ## 專案結構
 
@@ -46,7 +46,7 @@ bash scripts/list-skills.sh
 
 ### Productivity
 
-尚無正式 skills。見 [分類目錄](skills/productivity/README.md)。
+- [plan-sdgs-exhibition](skills/productivity/plan-sdgs-exhibition/SKILL.md)：以本輪目標、回合預算與 MVP 停點，陪你分次規劃 SDGs 數位展覽。[使用說明](docs/productivity/plan-sdgs-exhibition.md)。
 
 ## 本機連結
 

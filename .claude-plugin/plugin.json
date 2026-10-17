@@ -7,5 +7,7 @@
   },
   "repository": "https://github.com/lloyd3126/skills",
   "license": "MIT",
-  "skills": []
+  "skills": [
+    "./skills/productivity/plan-sdgs-exhibition"
+  ]
 }
