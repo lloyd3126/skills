@@ -2,7 +2,7 @@
 
 將實際使用的工作流程整理成小而可組合、可版本控制的 agent skills。
 
-目前是專案骨架，尚無正式或實驗中的 skills，也尚未發佈或驗證 plugin 安裝。
+目前有[實驗中的 skills](skills/in-progress/README.md)。尚無正式 skills，也尚未發佈或驗證 plugin 安裝。
 
 ## 專案結構
 
@@ -54,4 +54,4 @@ bash scripts/list-skills.sh
 
 ## 來源
 
-目錄分類與發佈骨架參考 [mattpocock/skills](https://github.com/mattpocock/skills)，快照 commit：`49dd158d1076134a641b33efb035946536778336`。保留原作者 MIT 授權，來源與改編範圍見 [NOTICE.md](NOTICE.md)。本專案的 skill 內容待建立。
+目錄分類與發佈骨架參考 [mattpocock/skills](https://github.com/mattpocock/skills)，快照 commit：`49dd158d1076134a641b33efb035946536778336`。保留原作者 MIT 授權，來源與改編範圍見 [NOTICE.md](NOTICE.md)。

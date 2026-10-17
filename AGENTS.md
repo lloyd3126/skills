@@ -2,7 +2,7 @@
 
 ## 專案與範圍
 
-這是 `lloyd3126/skills`，用來維護可重用的個人 agent skills。以小而可組合的工作流程為單位；目前只有骨架，尚無正式 skill。
+這是 `lloyd3126/skills`，用來維護可重用的個人 agent skills。以小而可組合的工作流程為單位；目前有實驗中的 skill，尚無正式 skill。
 本檔放在 Git root，提供本專案規則；沿用使用者的全域偏好。只有子目錄確實需要不同規則時才新增巢狀指引。
 
 ## 結構與資料來源
@@ -28,7 +28,7 @@
 ## 開發與驗證
 
 - 基本檢查不需要安裝依賴：`npm run check`。
-- 列出 skills：`bash scripts/list-skills.sh`。零筆是目前骨架的正常結果。
+- 列出 skills：`bash scripts/list-skills.sh`。清單包含實驗中的 skills，本機連結工具僅處理正式分類。
 - 需要 Changesets 時才執行 `npm ci`；版本更新用 `npm run changeset` 及 `npm run version`，然後執行 `npm run check`。
 - 修改 shell script 後執行 `bash -n <path>`，並以暫存輸入驗證實際行為；修改 Node script 後檢查語法與相關成功、失敗路徑。
 - 修改 skill 後，以代表性需求檢查觸發範圍、執行結果及資源連結；有實際操作風險時在隔離環境驗證。

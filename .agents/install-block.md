@@ -1,6 +1,6 @@
 # 本機試用與安裝
 
-目前沒有 skills，不需要安裝。新增並驗證正式 skills 後：
+目前的實驗項目見 [in-progress 分類目錄](../skills/in-progress/README.md)，本機連結工具不處理此分類。新增並驗證正式 skills 後：
 
 ```sh
 bash scripts/link-skills.sh
