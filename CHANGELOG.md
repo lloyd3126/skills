@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- 統一使用 `npx skills add` 安裝，移除 Claude 外掛市集、Changesets、本機連結工具與 GitHub Actions 檢查。
 - 收錄 `pdf-margin-review`，支援產生帶有頁邊短評的 PDF 副本。
 - 將 skills 改為 `skills/<name>/`，分類集中在 README。
 - 將 `plan-sdgs-exhibition` 升為正式 skill，移至 `productivity`、加入 plugin 清單，並補上使用說明及正式安裝路徑。
