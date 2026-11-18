@@ -4,7 +4,7 @@
 
 ## 在 Codex 使用
 
-在專案目錄用 [README 的指令](../README.md#用-skillssh-安裝)安裝後，附上 PDF 並指定審閱範圍。也可以直接提供要標記的原句與說明。
+在專案目錄用 [README 的指令](../README.md#pdf-margin-review)安裝後，附上 PDF 並指定審閱範圍。也可以直接提供要標記的原句與說明。
 
 > 用 `$pdf-margin-review` 幫我檢查這份 PDF 的教學目標與評量方式，並加上頁邊短評。
 

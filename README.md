@@ -2,24 +2,31 @@
 
 收錄從實際工作整理出的可重用 Agent Skills，讓 Codex、Claude Code 等工具依循同一套工作流程。
 
+在要使用 skill 的專案目錄執行對應的安裝指令，並依提示選擇 Agent。
+
 ## 分類
 
 ### 工作流程
 
-- [plan-sdgs-exhibition](skills/plan-sdgs-exhibition/SKILL.md) 協助分階段規劃 SDGs 數位展覽，從策展主張做到可試作的原型企劃。詳見[使用說明](docs/plan-sdgs-exhibition.md)。
+#### [plan-sdgs-exhibition](skills/plan-sdgs-exhibition/SKILL.md)
 
-### 文件處理
-
-- [pdf-margin-review](skills/pdf-margin-review/SKILL.md) 在 PDF 副本標亮原句，並把短評排成右側卡片。詳見[使用說明](docs/pdf-margin-review.md)。
-
-## 用 skills.sh 安裝
-
-在要使用 skill 的專案目錄執行，並依提示選擇 Agent。
+協助分階段規劃 SDGs 數位展覽，從策展主張做到可試作的原型企劃。詳見[使用說明](docs/plan-sdgs-exhibition.md)。
 
 ```sh
 npx skills add lloyd3126/skills --skill plan-sdgs-exhibition
+```
+
+### 文件處理
+
+#### [pdf-margin-review](skills/pdf-margin-review/SKILL.md)
+
+在 PDF 副本標亮原句，並把短評排成右側卡片。詳見[使用說明](docs/pdf-margin-review.md)。
+
+```sh
 npx skills add lloyd3126/skills --skill pdf-margin-review
 ```
+
+## 用 skills.sh 安裝
 
 加上 `--list` 可查看儲存庫可安裝的 skills，加上 `-g` 可跨專案使用。詳見 [skills.sh CLI 文件](https://skills.sh/docs/cli)。
 
