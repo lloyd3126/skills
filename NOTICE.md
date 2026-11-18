@@ -1,6 +1,6 @@
 # Attribution
 
-The initial repository structure and `scripts/list-skills.sh` were adapted from [mattpocock/skills](https://github.com/mattpocock/skills/tree/49dd158d1076134a641b33efb035946536778336), copyright (c) 2026 Matt Pocock, under the MIT License.
+The initial repository structure was adapted from [mattpocock/skills](https://github.com/mattpocock/skills/tree/49dd158d1076134a641b33efb035946536778336), copyright (c) 2026 Matt Pocock, under the MIT License.
 
 The upstream license is preserved in `LICENSE`.
 
