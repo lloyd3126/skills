@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Preview promoted skills; apply only when local installation is requested.
+# Preview repository skills; apply only when local installation is requested.
 REPO="$(cd "$(dirname "$0")/.." && pwd)"
 DEST="$HOME/.agents/skills"
 APPLY=false
@@ -20,18 +20,12 @@ names=()
 while IFS= read -r -d '' skill_md; do
   src="$(dirname "$skill_md")"
   name="$(basename "$src")"
-  for existing in "${names[@]+"${names[@]}"}"; do
-    if [ "$name" = "$existing" ]; then
-      echo "Duplicate skill name: $name" >&2
-      exit 1
-    fi
-  done
   sources+=("$src")
   names+=("$name")
-done < <(find "$REPO/skills/engineering" "$REPO/skills/productivity" -mindepth 2 -maxdepth 2 -name SKILL.md -type f -print0)
+done < <(find "$REPO/skills" -mindepth 2 -maxdepth 2 -name SKILL.md -type f -print0)
 
 if [ "${#sources[@]}" -eq 0 ]; then
-  echo "No promoted skills to link."
+  echo "No skills to link."
   exit 0
 fi
 

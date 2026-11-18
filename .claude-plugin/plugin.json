@@ -8,6 +8,7 @@
   "repository": "https://github.com/lloyd3126/skills",
   "license": "MIT",
   "skills": [
-    "./skills/productivity/plan-sdgs-exhibition"
+    "./skills/plan-sdgs-exhibition",
+    "./skills/pdf-margin-review"
   ]
 }

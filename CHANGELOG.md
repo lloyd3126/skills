@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- 收錄 `pdf-margin-review`，支援產生帶有頁邊短評的 PDF 副本。
+- 將 skills 改為 `skills/<name>/`，分類集中在 README。
 - 將 `plan-sdgs-exhibition` 升為正式 skill，移至 `productivity`、加入 plugin 清單，並補上使用說明及正式安裝路徑。
 - 為 `plan-sdgs-exhibition` 加入本輪目標、回合預算、完成條件與 MVP 停點，達成小成果或用完預算時主動收束並保留續談入口。
 - 改善 `plan-sdgs-exhibition` 的決策進度收束、主張與證據定位，以及可觀察的試看判準與修正方法。

@@ -2,7 +2,7 @@
 
 ## 用途
 
-[plan-sdgs-exhibition](../../skills/productivity/plan-sdgs-exhibition/SKILL.md) 陪你將 SDGs 議題想法逐步發展成策展企劃。透過 RED 提問、案例比較、素材評估、敘事與原型規劃，整理有依據且能繼續製作的成果。
+[plan-sdgs-exhibition](../skills/plan-sdgs-exhibition/SKILL.md) 陪你將 SDGs 議題想法逐步發展成策展企劃。透過 RED 提問、案例比較、素材評估、敘事與原型規劃，整理有依據且能繼續製作的成果。
 
 每次只完成當下需要的 MVP，依本輪目標、回合預算與完成條件收束。成果可以小到一個核心問題、一個展區草圖或一項試看任務，逐次累積成完整企劃。
 
@@ -18,7 +18,7 @@
 
 ```text
 請將以下 skill 安裝到目前專案根目錄的 .agents/skills，讀取後直接開始引導我：
-https://github.com/lloyd3126/skills/tree/main/skills/productivity/plan-sdgs-exhibition
+https://github.com/lloyd3126/skills/tree/main/skills/plan-sdgs-exhibition
 
 先問我的初步想法，最多 3 回合釐清核心問題、目標觀眾與預期改變。達到 MVP 或用完預算就收束，留下成果、缺口與下次入口。
 ```
