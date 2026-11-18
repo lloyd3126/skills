@@ -160,11 +160,26 @@ def make_card(item, bounds, panel_width):
     return anchor, rows, height
 
 
-def position_cards(entries, page_height, panel_width):
-    cards = [make_card(item, bounds, panel_width) for item, bounds in entries]
-    if sum(card[2] for card in cards) + max(0, len(cards) - 1) * CARD_GAP > page_height - 2 * PANEL_MARGIN:
-        return None
+def paginate_cards(entries, page_height, page_number):
+    available = page_height - 2 * PANEL_MARGIN
+    pages = [[]]
+    used = 0
+    for item, bounds in entries:
+        card = make_card(item, bounds, PANEL_WIDTH)
+        height = card[2]
+        if height > available:
+            raise ValueError(f"第 {page_number} 頁的標注 {item['id']} 單張卡片超過頁面高度，請縮短原文或說明")
+        gap = CARD_GAP if pages[-1] else 0
+        if used + gap + height > available:
+            pages.append([])
+            used = 0
+            gap = 0
+        pages[-1].append(card)
+        used += gap + height
+    return pages
 
+
+def position_cards(cards, page_height):
     positions = []
     minimum = PANEL_MARGIN
     for anchor, _, height in cards:
@@ -282,20 +297,27 @@ def render(args):
         raise ValueError("字型缺少這些字元：" + " ".join(missing))
     pdfmetrics.registerFont(font)
 
-    for panel_width in (PANEL_WIDTH, 300, 360):
-        positions = [position_cards(page_entries, height, panel_width)
-                     for (_, height), page_entries in zip(page_sizes, entries)]
-        if all(position is not None for position in positions):
-            break
-    else:
-        crowded = ", ".join(str(index) for index, position in enumerate(positions, 1) if position is None)
-        raise ValueError(f"第 {crowded} 頁的卡片超出版面高度，請縮短說明或減少該頁標注")
-
     writer = PdfWriter(clone_from=reader)
-    for page, (width, height), page_entries, positioned in zip(writer.pages, page_sizes, entries, positions):
-        page.mediabox.upper_right = (width + panel_width, height)
-        page.cropbox.upper_right = (width + panel_width, height)
-        page.merge_page(panel_overlay(width, height, panel_width, page_entries, positioned))
+    output_index = 0
+    for page_number, ((width, height), page_entries) in enumerate(zip(page_sizes, entries), 1):
+        original_cards, *continuations = paginate_cards(page_entries, height, page_number)
+        total_width = width + PANEL_WIDTH
+        page = writer.pages[output_index]
+        page.mediabox.upper_right = (total_width, height)
+        page.cropbox.upper_right = (total_width, height)
+        positioned = position_cards(original_cards, height)
+        page.merge_page(panel_overlay(width, height, PANEL_WIDTH, page_entries, positioned))
+        output_index += 1
+
+        for cards in continuations:
+            positioned = []
+            top = PANEL_MARGIN
+            for card in cards:
+                positioned.append((top, card))
+                top += card[2] + CARD_GAP
+            writer.insert_blank_page(width=total_width, height=height, index=output_index)
+            writer.pages[output_index].merge_page(panel_overlay(width, height, PANEL_WIDTH, [], positioned))
+            output_index += 1
 
     manifest_data = (json.dumps({"source_sha256": source_hash, "annotations": annotations},
                                 ensure_ascii=False, indent=2) + "\n").encode("utf-8")
